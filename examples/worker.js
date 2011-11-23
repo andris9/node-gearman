@@ -1,6 +1,6 @@
 var Gearman = require("./gearman");
 
-var gearman = new Gearman("pangalink.net");
+var gearman = new Gearman("pangalink.net",0,1);
 
 gearman.registerWorker("reverse", function(payload, worker){
     var str = "", i;
@@ -12,7 +12,7 @@ gearman.registerWorker("reverse", function(payload, worker){
         worker.write(counter);
         if(counter>=10){
             worker.error();
-            clearInterval(timer)
+            clearInterval(timer);
         }
     }, 1000);
 

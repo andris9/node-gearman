@@ -1,0 +1,26 @@
+{
+    "name": "node-gearman",
+    "description": "Simple Gearman client/worker module for Node.JS",
+    "version": "0.1.0",
+    "author" : "Andris Reinman",
+    "maintainers":[
+        {
+            "name":"andris",
+            "email":"andris@node.ee"
+        }
+    ],
+    "homepage": "http://github.com/andris9/gearman",
+    "repository" : {
+        "type" : "git",
+        "url" : "http://github.com/andris9/gearman.git"
+    },
+    "main" : "./lib/gearman",
+    "licenses" : [
+        {
+            "type": "MIT",
+            "url": "http://github.com/andris9/gearman/blob/master/LICENSE"
+        }
+    ],
+    "engine": [ "node >=0.5.0" ],
+    "keywords": ["gearman", "worker", "message queue"]
+}
