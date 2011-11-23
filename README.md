@@ -15,7 +15,6 @@ Install through *npm*
 Set up connection data and create a new `Gearman` object
 
     var Gearman = require("node-gearman");
-    
     var gearman = new Gearman(hostname, port);
 
 Where `hostname` defaults to `"localhost"` and `port` to `4730`
@@ -83,7 +82,8 @@ Example:
 
     gearman.registerWorker("reverse", function(payload, worker){
         if(!payload){
-            return worker.error();
+            worker.error();
+            return;
         }
         var reversed = payload.toString("utf-8").split("").reverse().join("");
         worker.end(reversed);
