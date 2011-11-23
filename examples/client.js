@@ -1,16 +1,14 @@
 var Gearman = require("../lib/gearman"),
-    gearman = new Gearman("pangalink.net");
+    gearman = new Gearman(); // defaults to localhost
 
-var job = gearman.submitJob("reverse", "test");
+var job = gearman.submitJob("reverse", "test string");
 
 job.on("error", function(err){
     console.log("ERROR: ", err.message || err);
 });
 
-job.on("data", function(chunk){
-    if(chunk){
-        console.log(chunk.toString());
-    }
+job.on("data", function(reversed){
+    console.log(reversed.toString());
 });
 
 job.on("end", function(){

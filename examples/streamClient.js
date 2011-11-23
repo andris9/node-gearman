@@ -1,6 +1,6 @@
 var Gearman = require("../lib/gearman"),
     fs = require("fs"),
-    gearman = new Gearman("pangalink.net");
+    gearman = new Gearman(); // defaults to localhost
 
 var job = gearman.submitJob("stream", null),
     output = fs.createWriteStream(__dirname+"/../../wordlist.txt.copy"); 

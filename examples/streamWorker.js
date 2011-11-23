@@ -1,7 +1,7 @@
 var Gearman = require("../lib/gearman"),
     fs = require("fs");
 
-var gearman = new Gearman("pangalink.net",0,1);
+var gearman = new Gearman(); // defaults to localhost
 
 var filepath = __dirname+"/../../wordlist.txt";
 

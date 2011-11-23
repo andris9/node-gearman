@@ -1,18 +1,16 @@
 var Gearman = require("../lib/gearman"),
-    gearman = new Gearman("pangalink.net");
+    gearman = new Gearman();  // defaults to localhost
 
 gearman.registerWorker("reverse", function(payload, worker){
-    var str = "", i;
-    payload = payload.toString("utf-8");
+    if(!payload){
+        worker.error();
+        return;
+    }
+    var reversed = payload.toString("utf-8").split("").reverse().join("");
 
-    var counter = 0;
-    var timer = setInterval(function(){
-        counter++;
-        worker.write(counter);
-        if(counter>=10){
-            worker.error();
-            clearInterval(timer);
-        }
-    }, 1000);
-
+    // delay for 1 sec before returning
+    setTimeout(function(){
+        worker.end(reversed);
+    },1000);
+    
 });
