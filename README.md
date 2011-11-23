@@ -10,6 +10,8 @@ Install through *npm*
 
 ## Usage
 
+See [examples](https://github.com/andris9/node-gearman/tree/master/examples) folder for sample scripts
+
 ## Connect to a Gearman server
 
 Set up connection data and create a new `Gearman` object
