@@ -34,6 +34,14 @@ The following events can be listened for a `Gearman` object:
   * **close** - connection closed
   * **error** - an error occured. Connection is automatically closed.
 
+Example:
+
+    var gearman = new Gearman(hostname, port);
+    gearman.on("connected", function(){
+        console.log("Connected to the server!");
+    });
+    gearman.connect();
+
 ## Submit a Job
 
 Jobs can be submitted with `gearman.submitJob(name, payload)` where `name` is the name of the function and `payload` is a string or a Buffer. The returned object (Event Emitter) can be used to detect job status and has the following events:
