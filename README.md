@@ -93,7 +93,9 @@ Example:
 
 ## Streaming
 
-Worker and job objects also act as Stream objects (workers are writable and jobs readable streams), so you can stream data with `pipe` from a worker to a client (but not the other way round).
+Worker and job objects also act as Stream objects (workers are writable and jobs readable streams), so you can stream data with `pipe` from a worker to a client (but not the other way round). This is useful for zipping/unzipping etc.
+
+**NB!** Streaming support is experimental, do not send very large files as the data tends to clutter up (workers stream interface lacks support for pausing etc.).
 
 **Streaming worker**
 
@@ -110,6 +112,7 @@ Worker and job objects also act as Stream objects (workers are writable and jobs
     
     // save incoming stream to file
     job.pipe(output);
+
 
 ## License
 

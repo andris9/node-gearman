@@ -1,11 +1,13 @@
 var Gearman = require("../lib/gearman"),
     fs = require("fs"),
-    gearman = new Gearman(); // defaults to localhost
+    zlib = require("zlib");
 
-var job = gearman.submitJob("stream", null),
+var gearman = new Gearman(), // defaults to localhost
+    job = gearman.submitJob("stream", null),
     output = fs.createWriteStream(__dirname+"/../../wordlist.txt.copy"); 
 
-job.pipe(output, {end: false});
+// unpack stream and send to file
+job.pipe(zlib.createGunzip()).pipe(output);
 
 job.on("end", function(){
     console.log("transfer ready");
