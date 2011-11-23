@@ -89,6 +89,26 @@ Example:
         worker.end(reversed);
     });
 
+## Streaming
+
+Worker and job objects also act as Stream objects (workers are writable and jobs readable streams), so you can stream data with `pipe` from a worker to a client (but not the other way round).
+
+**Streaming worker**
+
+    gearman.registerWorker("stream_file", function(payload, worker){
+        var input = fs.createReadStream(filepath);
+        // stream file to client
+        input.pipe(worker);
+    });
+
+**Streaming client**
+
+    var job = gearman.submitJob("stream", null),
+        output = fs.createWriteStream(filepath); 
+    
+    // save incoming stream to file
+    job.pipe(output);
+
 ## License
 
 **MIT**

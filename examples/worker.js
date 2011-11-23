@@ -1,6 +1,5 @@
-var Gearman = require("./gearman");
-
-var gearman = new Gearman("pangalink.net",0,1);
+var Gearman = require("../lib/gearman"),
+    gearman = new Gearman("pangalink.net");
 
 gearman.registerWorker("reverse", function(payload, worker){
     var str = "", i;

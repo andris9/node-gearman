@@ -1,9 +1,7 @@
-var Gearman = require("./gearman");
+var Gearman = require("../lib/gearman"),
+    gearman = new Gearman("pangalink.net");
 
-var gearman = new Gearman("pangalink.net");
-
-var y = new Gearman("pangalink.net");
-var job = y.submitJob("reverse", "test");
+var job = gearman.submitJob("reverse", "test");
 
 job.on("error", function(err){
     console.log("ERROR: ", err.message || err);
