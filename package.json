@@ -1,7 +1,7 @@
 {
     "name": "node-gearman",
     "description": "Simple Gearman client/worker module for Node.JS",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "author" : "Andris Reinman",
     "maintainers":[
         {
