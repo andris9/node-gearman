@@ -1,0 +1,263 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'publish', '-f' ]
+info using npm@1.1.0-alpha-6
+info using node@v0.6.5
+verbose config file /root/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/local/lib/node_modules/npm/npmrc
+verbose publish [ '.' ]
+verbose caching /root/node-gearman/package.json
+verbose loadDefaults node-gearman@0.1.4
+info prepublish node-gearman@0.1.4
+verbose cache add [ '.', null ]
+silly cache add: name, spec, args [ undefined, '.', [ '.', null ] ]
+verbose parsed url { pathname: '.', path: '.', href: '.' }
+verbose caching package.json
+verbose loadDefaults node-gearman@0.1.4
+verbose pack /root/node-gearman /tmp/npm-1323442285571/1323442285571-0.8930567952338606/tmp.tgz
+silly makeList /root/node-gearman
+silly dir, dirLen [ '/root/node-gearman', 19 ]
+verbose tarball /tmp/npm-1323442285571/1323442285571-0.8930567952338606/tmp.tgz
+verbose parent /root/node-gearman
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm'
+verbose mkdir done: /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm 755
+verbose unpack_ uid, gid [ 0, 0 ]
+verbose unpackTarget /tmp/npm-1323442285571/1323442285571-0.8930567952338606/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman/package.json
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman/LICENSE
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman/README.md
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman/examples
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman/examples/streamWorker.js
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman/examples/worker.js
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman/examples/client.js
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman/examples/streamClient.js
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman/test
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman/test/test.js
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman/lib
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman/lib/gearman.js
+verbose gunzed /tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman
+verbose rm'ed /tmp/npm-1323442285571/1323442285571-0.8930567952338606/package
+verbose renamed [ '/tmp/npm-1323442285571/1323442285571-0.8930567952338606/___package.npm/node-gearman',
+verbose renamed   '/tmp/npm-1323442285571/1323442285571-0.8930567952338606/package' ]
+verbose caching /tmp/npm-1323442285571/1323442285571-0.8930567952338606/package/package.json
+verbose loadDefaults node-gearman@0.1.4
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1323442285571/1323442285571-0.8930567952338606/package/package.json
+verbose pack /tmp/npm-1323442285571/1323442285571-0.8930567952338606/package /root/.npm/node-gearman/0.1.4/package.tgz
+silly makeList /tmp/npm-1323442285571/1323442285571-0.8930567952338606/package
+silly dir, dirLen [ '/tmp/npm-1323442285571/1323442285571-0.8930567952338606/package',
+silly dir, dirLen   64 ]
+verbose tarball /root/.npm/node-gearman/0.1.4/package.tgz
+verbose parent /tmp/npm-1323442285571/1323442285571-0.8930567952338606/package
+verbose mkdir (expected) error ENOENT, no such file or directory '/root/.npm/node-gearman/0.1.4/___package.npm'
+verbose mkdir done: /root/.npm/node-gearman/0.1.4/___package.npm 755
+verbose unpack_ uid, gid [ 0, 0 ]
+verbose unpackTarget /root/.npm/node-gearman/0.1.4/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/package.json
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/LICENSE
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/README.md
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/examples
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/examples/streamWorker.js
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/examples/worker.js
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/examples/client.js
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/examples/streamClient.js
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/test
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/test/test.js
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/lib
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/lib/gearman.js
+verbose gunzed /root/.npm/node-gearman/0.1.4/___package.npm/package
+verbose rm'ed /root/.npm/node-gearman/0.1.4/package
+verbose renamed [ '/root/.npm/node-gearman/0.1.4/___package.npm/package',
+verbose renamed   '/root/.npm/node-gearman/0.1.4/package' ]
+verbose caching /root/.npm/node-gearman/0.1.4/package/package.json
+verbose loadDefaults node-gearman@0.1.4
+silly updated sha bytes 7247
+info shasum 911660ecd3193f349e3f0f12e4bbed55e63a32f8
+info shasum /root/.npm/node-gearman/0.1.4/package.tgz
+verbose from cache /root/.npm/node-gearman/0.1.4/package/package.json
+verbose chmod /root/.npm/node-gearman/0.1.4/package.tgz 644
+verbose chown [ '/root/.npm/node-gearman/0.1.4/package.tgz', 0, 0 ]
+silly publish { name: 'node-gearman',
+silly publish   description: 'Simple Gearman client/worker module for Node.JS',
+silly publish   version: '0.1.4',
+silly publish   author: { name: 'Andris Reinman' },
+silly publish   maintainers: [ { name: 'andris', email: 'andris@node.ee' } ],
+silly publish   homepage: 'http://github.com/andris9/gearman',
+silly publish   repository: { type: 'git', url: 'git://github.com/andris9/gearman.git' },
+silly publish   main: './lib/gearman',
+silly publish   licenses: 
+silly publish    [ { type: 'MIT',
+silly publish        url: 'http://github.com/andris9/gearman/blob/master/LICENSE' } ],
+silly publish   engine: [ 'node >=0.5.0' ],
+silly publish   keywords: [ 'gearman', 'worker', 'message queue' ],
+silly publish   _npmUser: { name: 'andris', email: 'andris@node.ee' },
+silly publish   _id: 'node-gearman@0.1.4',
+silly publish   dependencies: {},
+silly publish   devDependencies: {},
+silly publish   engines: { node: '*' },
+silly publish   _engineSupported: true,
+silly publish   _npmVersion: '1.1.0-alpha-6',
+silly publish   _nodeVersion: 'v0.6.5',
+silly publish   _defaultsLoaded: true,
+silly publish   dist: 
+silly publish    { shasum: '182407b4804f98dca4f8dfe52f79457aacfaed9f',
+silly publish      tarball: 'http://registry.npmjs.org/node-gearman/-/node-gearman-0.1.4.tgz' } }
+verbose PUT node-gearman
+verbose raw, before any munging node-gearman
+verbose url resolving [ 'https://registry.npmjs.org/', './node-gearman' ]
+verbose url resolved https://registry.npmjs.org/node-gearman
+verbose GET node-gearman
+verbose raw, before any munging node-gearman
+verbose url resolving [ 'https://registry.npmjs.org/', './node-gearman' ]
+verbose url resolved https://registry.npmjs.org/node-gearman
+info Already published node-gearman@0.1.4
+verbose uploading bin dists []
+WARN publish Forced publish over node-gearman@0.1.4
+verbose GET node-gearman
+verbose raw, before any munging node-gearman
+verbose url resolving [ 'https://registry.npmjs.org/', './node-gearman' ]
+verbose url resolved https://registry.npmjs.org/node-gearman
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"1OY0PI83Q08AB8RYGZXHRS517"',
+silly get cb     date: 'Fri, 09 Dec 2011 14:51:28 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '8262' } ]
+verbose removing attachments { shasum: '6d3d8e5ba81026e8e0237ff7b046d9ded266a814',
+verbose removing attachments   tarball: 'http://registry.npmjs.org/node-gearman/-/node-gearman-0.1.4.tgz' }
+verbose PUT node-gearman/-rev/11-c09092e148f764c4081286f9cb6d20b9
+verbose raw, before any munging node-gearman/-rev/11-c09092e148f764c4081286f9cb6d20b9
+verbose url resolving [ 'https://registry.npmjs.org/',
+verbose url resolving   './node-gearman/-rev/11-c09092e148f764c4081286f9cb6d20b9' ]
+verbose url resolved https://registry.npmjs.org/node-gearman/-rev/11-c09092e148f764c4081286f9cb6d20b9
+ERR! Failed to update the data
+verbose publish [ '.' ]
+verbose from cache /root/node-gearman/package.json
+info prepublish node-gearman@0.1.4
+verbose cache add [ '.', null ]
+silly cache add: name, spec, args [ undefined, '.', [ '.', null ] ]
+verbose parsed url { pathname: '.', path: '.', href: '.' }
+verbose from cache package.json
+verbose pack /root/node-gearman /tmp/npm-1323442285571/1323442289700-0.6843818700872362/tmp.tgz
+silly makeList /root/node-gearman
+silly dir, dirLen [ '/root/node-gearman', 19 ]
+verbose tarball /tmp/npm-1323442285571/1323442289700-0.6843818700872362/tmp.tgz
+verbose parent /root/node-gearman
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm'
+verbose mkdir done: /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm 755
+verbose unpack_ uid, gid [ 0, 0 ]
+verbose unpackTarget /tmp/npm-1323442285571/1323442289700-0.6843818700872362/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman/package.json
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman/LICENSE
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman/README.md
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman/examples
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman/examples/streamWorker.js
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman/examples/worker.js
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman/examples/client.js
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman/examples/streamClient.js
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman/test
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman/test/test.js
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman/lib
+silly asyncMap in gTP /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman/lib/gearman.js
+verbose gunzed /tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman
+verbose rm'ed /tmp/npm-1323442285571/1323442289700-0.6843818700872362/package
+verbose renamed [ '/tmp/npm-1323442285571/1323442289700-0.6843818700872362/___package.npm/node-gearman',
+verbose renamed   '/tmp/npm-1323442285571/1323442289700-0.6843818700872362/package' ]
+verbose caching /tmp/npm-1323442285571/1323442289700-0.6843818700872362/package/package.json
+verbose loadDefaults node-gearman@0.1.4
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1323442285571/1323442289700-0.6843818700872362/package/package.json
+verbose pack /tmp/npm-1323442285571/1323442289700-0.6843818700872362/package /root/.npm/node-gearman/0.1.4/package.tgz
+silly makeList /tmp/npm-1323442285571/1323442289700-0.6843818700872362/package
+silly dir, dirLen [ '/tmp/npm-1323442285571/1323442289700-0.6843818700872362/package',
+silly dir, dirLen   64 ]
+verbose tarball /root/.npm/node-gearman/0.1.4/package.tgz
+verbose parent /tmp/npm-1323442285571/1323442289700-0.6843818700872362/package
+verbose mkdir (expected) error ENOENT, no such file or directory '/root/.npm/node-gearman/0.1.4/___package.npm'
+verbose mkdir done: /root/.npm/node-gearman/0.1.4/___package.npm 755
+verbose unpack_ uid, gid [ 0, 0 ]
+verbose unpackTarget /root/.npm/node-gearman/0.1.4/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar undefined
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/package.json
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/LICENSE
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/README.md
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/examples
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/examples/streamWorker.js
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/examples/worker.js
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/examples/client.js
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/examples/streamClient.js
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/test
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/test/test.js
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/lib
+silly asyncMap in gTP /root/.npm/node-gearman/0.1.4/___package.npm/package/lib/gearman.js
+verbose gunzed /root/.npm/node-gearman/0.1.4/___package.npm/package
+verbose rm'ed /root/.npm/node-gearman/0.1.4/package
+verbose renamed [ '/root/.npm/node-gearman/0.1.4/___package.npm/package',
+verbose renamed   '/root/.npm/node-gearman/0.1.4/package' ]
+verbose from cache /root/.npm/node-gearman/0.1.4/package/package.json
+silly updated sha bytes 7245
+info shasum 182407b4804f98dca4f8dfe52f79457aacfaed9f
+info shasum /root/.npm/node-gearman/0.1.4/package.tgz
+verbose from cache /root/.npm/node-gearman/0.1.4/package/package.json
+verbose chmod /root/.npm/node-gearman/0.1.4/package.tgz 644
+verbose chown [ '/root/.npm/node-gearman/0.1.4/package.tgz', 0, 0 ]
+silly publish { name: 'node-gearman',
+silly publish   description: 'Simple Gearman client/worker module for Node.JS',
+silly publish   version: '0.1.4',
+silly publish   author: { name: 'Andris Reinman' },
+silly publish   maintainers: [ { name: 'andris', email: 'andris@node.ee' } ],
+silly publish   homepage: 'http://github.com/andris9/gearman',
+silly publish   repository: { type: 'git', url: 'git://github.com/andris9/gearman.git' },
+silly publish   main: './lib/gearman',
+silly publish   licenses: 
+silly publish    [ { type: 'MIT',
+silly publish        url: 'http://github.com/andris9/gearman/blob/master/LICENSE' } ],
+silly publish   engine: [ 'node >=0.5.0' ],
+silly publish   keywords: [ 'gearman', 'worker', 'message queue' ],
+silly publish   _npmUser: { name: 'andris', email: 'andris@node.ee' },
+silly publish   _id: 'node-gearman@0.1.4',
+silly publish   dependencies: {},
+silly publish   devDependencies: {},
+silly publish   engines: { node: '*' },
+silly publish   _engineSupported: true,
+silly publish   _npmVersion: '1.1.0-alpha-6',
+silly publish   _nodeVersion: 'v0.6.5',
+silly publish   _defaultsLoaded: true,
+silly publish   dist: 
+silly publish    { shasum: '182407b4804f98dca4f8dfe52f79457aacfaed9f',
+silly publish      tarball: 'http://registry.npmjs.org/node-gearman/-/node-gearman-0.1.4.tgz' } }
+verbose PUT node-gearman
+verbose raw, before any munging node-gearman
+verbose url resolving [ 'https://registry.npmjs.org/', './node-gearman' ]
+verbose url resolved https://registry.npmjs.org/node-gearman
+verbose GET node-gearman
+verbose raw, before any munging node-gearman
+verbose url resolving [ 'https://registry.npmjs.org/', './node-gearman' ]
+verbose url resolved https://registry.npmjs.org/node-gearman
+info Already published node-gearman@0.1.4
+verbose uploading bin dists []
+ERR! publish fail Cannot publish over existing version.
+ERR! publish fail Bump the 'version' field, set the --force flag, or
+ERR! publish fail     npm unpublish 'node-gearman@0.1.4'
+ERR! publish fail and try again
+ERR! 
+ERR! System Linux 2.6.18-028stab093.2
+ERR! command "node" "/usr/local/bin/npm" "publish" "-f"
+ERR! cwd /root/node-gearman
+ERR! node -v v0.6.5
+ERR! npm -v 1.1.0-alpha-6
+ERR! code EPUBLISHCONFLICT
+ERR! message publish fail
+verbose exit [ 1, true ]
