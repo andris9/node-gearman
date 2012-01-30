@@ -27,6 +27,8 @@
             "url": "http://github.com/andris9/gearman/blob/master/LICENSE"
         }
     ],
-    "engine": [ "node >=0.5.0" ],
+    "engine": {
+        "node": ">=0.5"
+    },
     "keywords": ["gearman", "worker", "message queue"]
 }
