@@ -2,6 +2,10 @@
 
 **node-gearman** is an extremely simple Gearman client/worker module for Node.JS. You can register workers and you can submit jobs, that's all about it.
 
+[![Build Status](https://secure.travis-ci.org/andris9/node-gearman.png)](http://travis-ci.org/andris9/node-gearman)
+
+**NB!** Breaking API - `'connected'` events etc are now called '`connect`'.
+
 ## Installation
 
 Install through *npm*
@@ -30,7 +34,7 @@ This doesn't actually create the connection yet. Connection is created when need
 
 The following events can be listened for a `Gearman` object:
 
-  * **connected** - when the connection has been successfully established to the server
+  * **connect** - when the connection has been successfully established to the server
   * **idle** - when a there's no jobs available for workers
   * **close** - connection closed
   * **error** - an error occured. Connection is automatically closed.
@@ -38,7 +42,7 @@ The following events can be listened for a `Gearman` object:
 Example:
 
     var gearman = new Gearman(hostname, port);
-    gearman.on("connected", function(){
+    gearman.on("connect", function(){
         console.log("Connected to the server!");
     });
     gearman.connect();
@@ -91,6 +95,37 @@ Example:
         worker.end(reversed);
     });
 
+## Job timeout
+
+You can set an optional timeout value (in milliseconds) for a job to abort it automatically when the timeout occurs.
+
+Timeout automatically aborts further processing of the job.
+
+    job.setTimeout(timeout[, timeoutCallback]);
+
+If `timeoutCallback` is not set, a `'timeout'` event is emitted on timeout.
+
+    job.setTimeout(10*1000); // timeout in 10 secs
+    job.on("timeout", function(){
+        console.log("Timeout exceeded for the worker. Job aborted.");
+    }); 
+
+## Close connection
+
+You can close the Geamrna connection with `close()`
+
+    var gearman = new Gearman();
+    ...
+    gearman.close();
+
+The connection is closed when a `'close'` event for the Gearman object is emitted
+
+    gearman.on("close", function(){
+        console.log("Connection closed");
+    });
+    
+    gearman.close();
+
 ## Streaming
 
 Worker and job objects also act as Stream objects (workers are writable and jobs readable streams), so you can stream data with `pipe` from a worker to a client (but not the other way round). This is useful for zipping/unzipping etc.
@@ -113,7 +148,15 @@ Worker and job objects also act as Stream objects (workers are writable and jobs
     // save incoming stream to file
     job.pipe(output);
 
+## Run tests
 
+Run the tests with
+
+    npm test
+    
+or alternatively
+
+    node run_tests.js
 ## License
 
 **MIT**

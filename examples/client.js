@@ -3,8 +3,16 @@ var Gearman = require("../lib/gearman"),
 
 var job = gearman.submitJob("reverse", "test string");
 
+job.setTimeout(2000);
+
+job.on("timeout", function(){
+    console.log("Timeout!");
+    gearman.close();
+})
+
 job.on("error", function(err){
     console.log("ERROR: ", err.message || err);
+    gearman.close();
 });
 
 job.on("data", function(reversed){
@@ -13,4 +21,5 @@ job.on("data", function(reversed){
 
 job.on("end", function(){
     console.log("Ready!");
+    gearman.close();
 });

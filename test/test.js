@@ -3,7 +3,7 @@ var Gearman = require("../lib/gearman"),
 
 // CREATE INSTANCE
 
-var gearman = new Gearman("pangalink.net");
+var gearman = new Gearman("localhost");
 
 exports["Test Connection"] = {
     
@@ -19,7 +19,7 @@ exports["Test Connection"] = {
         gearman.connect();
 
         gearman.on("error", function(e){
-            test.ifError(e);
+            test.ok(false, "Should not occur");
             test.done();
         });
 
@@ -46,7 +46,7 @@ exports["Worker and Client"] = {
 
     setUp: function(callback){
 
-        this.gearman = new Gearman("pangalink.net");
+        this.gearman = new Gearman("localhost");
         this.gearman.on("connect", function(){
             callback();
         });
@@ -128,3 +128,94 @@ exports["Worker and Client"] = {
     }
 
 };
+
+exports["Job timeout"] = {
+    setUp: function(callback){
+
+        this.gearman = new Gearman("localhost");
+        this.gearman.on("connect", function(){
+            callback();
+        });
+        this.gearman.on("error", function(e){
+            console.log(e.message);
+        });
+        this.gearman.connect();
+        
+        this.gearman.registerWorker("test", function(payload, worker){
+            setTimeout(function(){
+                worker.end("OK");
+            }, 300);
+        });
+    },
+
+    tearDown: function(callback){
+        this.gearman.on("close", function(){
+            callback();
+        });
+        this.gearman.close();
+    },
+    
+    "Timeout event": function(test){
+        test.expect(1);
+        
+        var job = this.gearman.submitJob("test", "test");
+        job.setTimeout(100);
+
+        job.on("timeout", function(){
+            test.ok(1,"TImeout occured");
+            test.done();
+        });
+
+        job.on("error", function(err){
+            test.ok(false,"Job failed");
+            test.done();
+        });
+
+        job.on("end", function(err){
+            test.ok(false, "Job should not complete");
+            test.done();
+        });
+    },
+    
+    "Timeout callback": function(test){
+        test.expect(1);
+        
+        var job = this.gearman.submitJob("test", "test");
+        job.setTimeout(100, function(){
+            test.ok(true,"TImeout occured");
+            test.done();
+        });
+
+        job.on("error", function(err){
+            test.ok(false,"Job failed");
+            test.done();
+        });
+
+        job.on("end", function(err){
+            test.ok(false, "Job should not complete");
+            test.done();
+        });
+    },
+    
+    "Timeout set but does not occur": function(test){
+        test.expect(1);
+        
+        var job = this.gearman.submitJob("test", "test");
+        job.setTimeout(400, function(){
+            test.ok(false,"Timeout occured");
+            test.done();
+        });
+
+        job.on("error", function(err){
+            test.ok(false,"Job failed");
+            test.done();
+        });
+
+        job.on("end", function(err){
+            test.ok(true, "Job completed before timeout");
+            test.done();
+        });
+    }
+}
+
+
