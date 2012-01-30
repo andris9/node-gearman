@@ -4,7 +4,7 @@
 
 [![Build Status](https://secure.travis-ci.org/andris9/node-gearman.png)](http://travis-ci.org/andris9/node-gearman)
 
-**NB!** Breaking API - `'connected'` events etc are now called '`connect`'.
+**NB!** Breaking API change - `'connected'` events etc are now called `'connect'`.
 
 ## Installation
 
@@ -35,7 +35,7 @@ This doesn't actually create the connection yet. Connection is created when need
 The following events can be listened for a `Gearman` object:
 
   * **connect** - when the connection has been successfully established to the server
-  * **idle** - when a there's no jobs available for workers
+  * **idle** - when there's no jobs available for workers
   * **close** - connection closed
   * **error** - an error occured. Connection is automatically closed.
 
@@ -54,6 +54,7 @@ Jobs can be submitted with `gearman.submitJob(name, payload)` where `name` is th
   * **error** - if the job failed, has parameter error
   * **data** - contains a chunk of data as a Buffer
   * **end** - when the job has been completed, has no parameters
+  * **timeout** - when the job has been canceled due to timeout
 
 Example:
 
