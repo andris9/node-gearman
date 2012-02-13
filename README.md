@@ -27,7 +27,7 @@ Where `hostname` defaults to `"localhost"` and `port` to `4730`
 
 This doesn't actually create the connection yet. Connection is created when needed but you can force it with `gearman.connect()`
 
-    var gearman = Gearman(hostname, port);
+    var gearman = new Gearman(hostname, port);
     gearman.connect();
 
 ## Connection events
@@ -58,7 +58,7 @@ Jobs can be submitted with `gearman.submitJob(name, payload)` where `name` is th
 
 Example:
 
-    var gearman = Gearman(hostname, port);
+    var gearman = new Gearman(hostname, port);
     var job = gearman.submitJob("reverse", "test string");
 
     job.on("data", function(data){
@@ -85,7 +85,7 @@ Worker function `callback` gets two parameters - `payload` (received data as a B
 
 Example:
 
-    var gearman = Gearman(hostname, port);
+    var gearman = new Gearman(hostname, port);
 
     gearman.registerWorker("reverse", function(payload, worker){
         if(!payload){
