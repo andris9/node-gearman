@@ -28,7 +28,7 @@
         }
     ],
     "engine": {
-        "node": ">=0.5"
+        "node": ">=0.4"
     },
     "keywords": ["gearman", "worker", "message queue"]
 }
