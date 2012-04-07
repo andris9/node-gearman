@@ -6,6 +6,10 @@
 
 **NB!** Breaking API change - `'connected'` events etc are now called `'connect'`.
 
+## Support node-gearman development
+
+[![Donate to author](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DB26KWR2BQX5W)
+
 ## Installation
 
 Install through *npm*
