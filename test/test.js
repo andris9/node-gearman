@@ -173,7 +173,7 @@ exports["max response size"] = {
     },
 
     "Worker fails": function(test){
-        test.expect(1);
+        test.expect(2);
         
         this.gearman.registerWorker("test", function(payload, worker){
             worker.end(new Array(200000).join("x"));
@@ -183,6 +183,7 @@ exports["max response size"] = {
 
         job.on("error", function(err){
             test.ok(err,"Job response too big");
+            test.ok(err.size);
             this.gearman.on("idle", function(){
                 test.done();
             });
