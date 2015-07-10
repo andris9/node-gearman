@@ -183,7 +183,7 @@ exports["max response size"] = {
 
         job.on("error", function(err){
             test.ok(err,"Job response too big");
-            test.ok(err.size);
+            test.equal(err.size, 200020);
             this.gearman.on("idle", function(){
                 test.done();
             });
