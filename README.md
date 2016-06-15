@@ -1,3 +1,7 @@
+## NB!
+
+> This project is **unmaintained!** If anyone wants to take over please write to andris.reinman@gmail.com to get ownership of this repo and npm package
+
 # node-gearman
 
 **node-gearman** is an extremely simple Gearman client/worker module for Node.JS. You can register workers and you can submit jobs, that's all about it.
